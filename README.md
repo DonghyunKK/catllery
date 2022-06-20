@@ -8,7 +8,9 @@ https://catllery.netlify.app/
 
 ## Project Info
 
-The app, created using React and 24 random cat images displayed using css grid.
+The app, created using React and deployed with Netlify.
+
+24 random cat images displayed using css grid.
 
 Each image is clickable and when it's clicked, it shows in full screen as a image slide.
 

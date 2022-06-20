@@ -4,7 +4,7 @@ import './navbar.css'
 function Navbar ({getNewImg}) {
   return (
     <nav className='navbar'>
-      <button className='btn' onClick={getNewImg}>Suffle new cats</button>
+      <button className='btn' onClick={getNewImg}>Find new cats</button>
     </nav>
   );
 }

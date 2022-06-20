@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Gallery from './components/Gallery';
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://api.thecatapi.com/v1/images/search?limit=12", {
+      const response = await fetch("https://api.thecatapi.com/v1/images/search?limit=24", {
         method: 'GET',
         headers: {
           Accept: 'application/json',
@@ -36,17 +37,10 @@ function App() {
     }
   };
 
-  console.log(images)
-
   return (
     <div className='App'>
-
-    <button onClick={getNewImg}>Fetch data</button>
-    <Gallery images={images} />
-    {isLoading && <h2>Loading...</h2>}
-
-    
-
+      <Navbar getNewImg={getNewImg} />
+      {isLoading ? <div className='loader'></div> : <Gallery className='content' images={images} />}
     </div>
   );
 }
